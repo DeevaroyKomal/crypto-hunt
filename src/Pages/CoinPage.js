@@ -22,8 +22,12 @@ const CoinPage = () => {
   const { currency, symbol, user, setAlert, watchlist } = CryptoState();
 
   const fetchCoin = async () => {
-    const { data } = await axios.get(SingleCoin(id));
-    setCoin(data);
+    try {
+      const { data } = await axios.get(SingleCoin(id));
+      setCoin(data);
+    } catch (error) {
+      console.error("Error fetching coin:", error);
+    }
   };
 
   const inWatchlist = watchlist.includes(coin?.id);
@@ -58,6 +62,7 @@ const CoinPage = () => {
 
   useEffect(() => {
     fetchCoin();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!coin) return <LinearProgress sx={{ bgcolor: "orchid" }} />;
