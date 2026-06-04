@@ -1,7 +1,7 @@
-**Crypto Hunter**
+**Crypto Hunt**
 
 
-Crypto Hunter is a full-stack web application built using React and Firebase to track cryptocurrency prices in real time. It provides users with live market data, price charts, and basic user authentication.
+Crypto Hunt is a full-stack web application built using React and Firebase to track cryptocurrency prices in real time. It provides users with live market data, price charts, and basic user authentication. It provides price trend prediction for coins like bitcoin,ethereum, solana, xrp.
 
 **Features**
 
@@ -17,6 +17,8 @@ User watchlist stored in Firebase Firestore
 
 Responsive user interface
 
+Prediction of Price Trend
+
 **Technologies Used**
 
 React JS
@@ -24,6 +26,10 @@ React JS
 Material UI
 
 Chart.js
+
+Python
+
+Flask
 
 Firebase Authentication
 
